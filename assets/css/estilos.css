@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eef2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background: linear-gradient(90deg, #1e1e2f, #3c3c5c);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+
+/* === CONTENIDO PRINCIPAL === */
+main {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* === CAJAS DE TEXTO === */
+section {
+  background-color: #fdfdfd;
+  border-left: 6px solid #4CAF50;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+}
+
+section h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.imagen-principal {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.imagen-principal img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-principal img:hover {
+  transform: scale(1.02);
+}
+
+.leyenda-imagen {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* === VIDEOS === */
+.video {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.video p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.imagen-item {
+  flex: 1 1 280px;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.imagen-item:hover {
+  transform: translateY(-4px);
+}
+
+.imagen-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.leyenda-imagen {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+}
+.imagen-informacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.imagen-informacion img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-informacion img:hover {
+  transform: scale(1.02);
+}
+
+.imagen-informacion .leyenda-imagen {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  
+  section {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+
+  
+  .galeria-imagenes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen-item {
+    max-width: 90%;
+  }
+
+  
+  .video {
+    padding: 15px;
+  }
+
+  .video iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  
+  .imagen-principal img,
+  .imagen-informacion img {
+    max-width: 100%;
+    max-height: 400px;
+  }
+
+  .leyenda-imagen {
+    font-size: 14px;
+  }
+}
+
